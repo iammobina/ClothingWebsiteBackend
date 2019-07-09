@@ -10,3 +10,7 @@ class UploadDesign(generics.ListCreateAPIView):
 class DesignDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Design.objects.all()
     serializer_class =  UploadDesignSerializer
+
+class CreateUser(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = CreateUserSerializer
