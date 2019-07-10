@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6fe975-23db-4ec4-a849-d49a039e2c3e" name="Default" comment="Add &quot;Post_Update&quot; function to update each posts." />
+    <list default="true" id="be6fe975-23db-4ec4-a849-d49a039e2c3e" name="Default" comment="Add count_word and read_time function to estimate read time of a description." />
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,13 +31,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="240">
+              <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/posts/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,6 +74,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/posts/views.py" />
+        <option value="$PROJECT_DIR$/posts/utils.py" />
       </list>
     </option>
   </component>
@@ -143,7 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665893236</updated>
-      <workItem from="1562731706370" duration="748000" />
+      <workItem from="1562731706370" duration="1090000" />
     </task>
     <task id="LOCAL-00001" summary="Add &quot;post_create&quot; function to create posts.">
       <created>1562732249589</created>
@@ -166,11 +189,32 @@
       <option name="project" value="LOCAL" />
       <updated>1562732492769</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add &quot;Post_delete&quot; function to delete each posts.">
+      <created>1562732548863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562732548863</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add &quot;Post_list&quot; function to access all the posts.">
+      <created>1562732700222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562732700228</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add count_word and read_time function to estimate read time of a description.">
+      <created>1562732831837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562732831837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="748000" />
+    <option name="totallyTimeSpent" value="1090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -207,7 +251,11 @@
     <MESSAGE value="Add &quot;post_create&quot; function to create posts." />
     <MESSAGE value="Add &quot;Post_detail&quot; function to have (timezone) of created post." />
     <MESSAGE value="Add &quot;Post_Update&quot; function to update each posts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;Post_Update&quot; function to update each posts." />
+    <MESSAGE value="Add &quot;Post_delete&quot; function to delete each posts." />
+    <MESSAGE value="Add &quot;Post_list&quot; function to access all the posts." />
+    <MESSAGE value="Add count_word and read_time function to estimate read time of a description." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add count_word and read_time function to estimate read time of a description." />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -243,10 +291,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="240">
+          <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
