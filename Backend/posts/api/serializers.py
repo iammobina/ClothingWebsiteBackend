@@ -56,3 +56,13 @@ class PostListSerializer(ModelSerializer):
             'publish',
             'image',
         ]
+
+
+class PostCreateUpdateSerializer(ModelSerializer):
+    class Meta:
+        model = Post
+        fields = [
+            'title',
+            'content',
+            'publish'
+        ]
