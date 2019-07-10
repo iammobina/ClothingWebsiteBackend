@@ -14,3 +14,7 @@ class DesignDetail(generics.RetrieveUpdateDestroyAPIView):
 class CreateUser(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = CreateUserSerializer
+
+class UsersList(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UsersListSerializer

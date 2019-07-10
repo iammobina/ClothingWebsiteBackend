@@ -12,3 +12,10 @@ class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
+
+class UsersListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields =  [
+            'Name','Lastname'
+        ]
