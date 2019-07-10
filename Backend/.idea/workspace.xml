@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6fe975-23db-4ec4-a849-d49a039e2c3e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/posts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="be6fe975-23db-4ec4-a849-d49a039e2c3e" name="Default" comment="Add &quot;Post_Update&quot; function to update each posts." />
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,9 +35,9 @@
         <entry file="file://$PROJECT_DIR$/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="523">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
-                <element signature="e#0#27#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +143,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665893236</updated>
-      <workItem from="1562731706370" duration="510000" />
+      <workItem from="1562731706370" duration="748000" />
     </task>
     <task id="LOCAL-00001" summary="Add &quot;post_create&quot; function to create posts.">
       <created>1562732249589</created>
@@ -157,11 +152,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562732249589</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add &quot;Post_detail&quot; function to have (timezone) of created post.">
+      <created>1562732412260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562732412260</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add &quot;Post_Update&quot; function to update each posts.">
+      <created>1562732492769</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562732492769</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510000" />
+    <option name="totallyTimeSpent" value="748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -196,7 +205,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add &quot;post_create&quot; function to create posts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;post_create&quot; function to create posts." />
+    <MESSAGE value="Add &quot;Post_detail&quot; function to have (timezone) of created post." />
+    <MESSAGE value="Add &quot;Post_Update&quot; function to update each posts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;Post_Update&quot; function to update each posts." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -233,9 +244,9 @@
     <entry file="file://$PROJECT_DIR$/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
