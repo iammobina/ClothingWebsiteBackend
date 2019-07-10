@@ -1,5 +1,15 @@
 from django.db import models
 from django.utils import timezone
+from __future__ import unicode_literals
+from django.db.models.signals import pre_save
+from django.urls import reverse
+from django.utils.safestring import mark_safe
+from django.utils.text import slugify
+from markdown_deux import markdown
+from .utils import get_read_time
+
+from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
 
 
 class PostManager(models.Manager):
@@ -57,3 +67,15 @@ class Post(models.Model):
         instance = self
         content_type = ContentType.objects.get_for_model(instance.__class__)
         return content_type
+
+
+def create_slug(instance, new_slug=None):
+    slug = slugify(instance.title)
+    if new_slug is not None:
+        slug = new_slug
+    qs = Post.objects.filter(slug=slug).order_by("-id")
+    exists = qs.exists()
+    if exists:
+        new_slug = "%s-%s" % (slug, qs.first().id)
+        return create_slug(instance, new_slug=new_slug)
+    return slug
