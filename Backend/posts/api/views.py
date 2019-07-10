@@ -1,13 +1,16 @@
+from django.db.models import Q
+from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.generics import (
-    CreateAPIView, RetrieveAPIView, RetrieveUpdateAPIView, DestroyAPIView)
+    CreateAPIView, RetrieveAPIView, RetrieveUpdateAPIView, DestroyAPIView, ListAPIView)
 from rest_framework.permissions import AllowAny
 
+from posts.api.pagination import PostPageNumberPagination
 from posts.api.permissions import IsOwnerOrReadOnly
 from posts.models import Post
 
 from .serializers import (
     PostCreateUpdateSerializer,
-    PostDetailSerializer)
+    PostDetailSerializer, PostListSerializer)
 
 
 class PostCreateAPIView(CreateAPIView):
@@ -40,3 +43,23 @@ class PostDeleteAPIView(DestroyAPIView):
     serializer_class = PostDetailSerializer
     lookup_field = 'slug'
     permission_classes = [IsOwnerOrReadOnly]
+
+
+class PostListAPIView(ListAPIView):
+    serializer_class = PostListSerializer
+    filter_backends = [SearchFilter, OrderingFilter]
+    permission_classes = [AllowAny]
+    search_fields = ['title', 'content', 'user__first_name']
+    pagination_class = PostPageNumberPagination
+
+    def get_queryset(self, *args, **kwargs):
+        queryset_list = Post.objects.all()
+        query = self.request.GET.get("q")
+        if query:
+            queryset_list = queryset_list.filter(
+                Q(title__icontains=query) |
+                Q(content__icontains=query) |
+                Q(user__first_name__icontains=query) |
+                Q(user__last_name__icontains=query)
+            ).distinct()
+        return queryset_list

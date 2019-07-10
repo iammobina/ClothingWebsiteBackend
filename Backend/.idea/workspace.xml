@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6fe975-23db-4ec4-a849-d49a039e2c3e" name="Default" comment="Add pagination class to label each html page." />
+    <list default="true" id="be6fe975-23db-4ec4-a849-d49a039e2c3e" name="Default" comment="Add postDeleteApi class to serialize deleted posts.">
+      <change beforePath="$PROJECT_DIR$/posts/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/api/views.py" afterDir="false" />
+    </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,10 +58,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="363">
+              <caret line="62" column="17" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="17" />
               <folding>
-                <element signature="e#1#58#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -209,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665893236</updated>
-      <workItem from="1562731706370" duration="2404000" />
+      <workItem from="1562731706370" duration="2645000" />
     </task>
     <task id="LOCAL-00001" summary="Add &quot;post_create&quot; function to create posts.">
       <created>1562732249589</created>
@@ -386,11 +388,39 @@
       <option name="project" value="LOCAL" />
       <updated>1562734096089</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add PostCreateApiView to save post object in database.">
+      <created>1562734209093</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1562734209093</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add post detail class to access detail serializer.">
+      <created>1562734276633</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1562734276633</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add UpdatePostApi class to serialize updated post.">
+      <created>1562734317765</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1562734317765</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add postDeleteApi class to serialize deleted posts.">
+      <created>1562734358344</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1562734358344</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2404000" />
+    <option name="totallyTimeSpent" value="2645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -424,8 +454,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add &quot;post_create&quot; function to create posts." />
-    <MESSAGE value="Add &quot;Post_detail&quot; function to have (timezone) of created post." />
     <MESSAGE value="Add &quot;Post_Update&quot; function to update each posts." />
     <MESSAGE value="Add &quot;Post_delete&quot; function to delete each posts." />
     <MESSAGE value="Add &quot;Post_list&quot; function to access all the posts." />
@@ -447,7 +475,11 @@
     <MESSAGE value="Add __init__.py in posts migration" />
     <MESSAGE value="Add migration class model in posts migration." />
     <MESSAGE value="Add pagination class to label each html page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pagination class to label each html page." />
+    <MESSAGE value="Add PostCreateApiView to save post object in database." />
+    <MESSAGE value="Add post detail class to access detail serializer." />
+    <MESSAGE value="Add UpdatePostApi class to serialize updated post." />
+    <MESSAGE value="Add postDeleteApi class to serialize deleted posts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add postDeleteApi class to serialize deleted posts." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -565,10 +597,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="363">
+          <caret line="62" column="17" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="17" />
           <folding>
-            <element signature="e#1#58#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
