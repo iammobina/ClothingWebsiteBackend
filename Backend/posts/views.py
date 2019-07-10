@@ -1,11 +1,23 @@
+try:
+    from urllib import quote_plus
+except:
+    pass
+
+try:
+    from urllib.parse import quote_plus
+except:
+    pass
+
 from time import timezone
 
-import messages as messages
-
+from django.contrib import messages
 from posts.forms import PostForm
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
-
+from django.contrib.contenttypes.models import ContentType
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
+from .forms import PostForm
 from posts.models import Post
 
 
@@ -60,3 +72,36 @@ def post_delete(request, slug=None):
     instance.delete()
     messages.success(request, "Successfully deleted")
     return redirect("posts:list")
+
+
+def post_list(request):
+    today = timezone.now().date()
+    queryset_list = Post.objects.active()  # .order_by("-timestamp")
+    if request.user.is_staff or request.user.is_superuser:
+        queryset_list = Post.objects.all()
+
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query) |
+            Q(user__first_name__icontains=query) |
+            Q(user__last_name__icontains=query)
+        ).distinct()
+    paginator = Paginator(queryset_list, 8)  # Show 25 contacts per page
+    page_request_var = "page"
+    page = request.GET.get(page_request_var)
+    try:
+        queryset = paginator.page(page)
+    except PageNotAnInteger:
+        queryset = paginator.page(1)
+    except EmptyPage:
+        queryset = paginator.page(paginator.num_pages)
+
+    context = {
+        "object_list": queryset,
+        "title": "List",
+        "page_request_var": page_request_var,
+        "today": today,
+    }
+    return render(request, "post_list.html", context)
