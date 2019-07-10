@@ -1,5 +1,5 @@
 from rest_framework.generics import (
-    CreateAPIView, RetrieveAPIView, RetrieveUpdateAPIView)
+    CreateAPIView, RetrieveAPIView, RetrieveUpdateAPIView, DestroyAPIView)
 from rest_framework.permissions import AllowAny
 
 from posts.api.permissions import IsOwnerOrReadOnly
@@ -33,3 +33,10 @@ class PostUpdateAPIView(RetrieveUpdateAPIView):
 
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class PostDeleteAPIView(DestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostDetailSerializer
+    lookup_field = 'slug'
+    permission_classes = [IsOwnerOrReadOnly]
