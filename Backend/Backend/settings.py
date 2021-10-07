@@ -37,13 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'rest_framework',
     'users',
-=======
     'Request',
     'rest_framework',
->>>>>>> origin/SendDesignsToTailor
 ]
 
 MIDDLEWARE = [
@@ -127,8 +124,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
-<<<<<<< HEAD
-
 MEDIA_URL =  '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR) , 'contentfeed')
 
@@ -154,5 +149,4 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     )
 }
-=======
->>>>>>> origin/SendDesignsToTailor
+
