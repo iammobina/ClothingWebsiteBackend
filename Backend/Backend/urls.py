@@ -15,14 +15,22 @@ Including another URLconf
 """
 
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
+=======
+from django.urls import path,include
+>>>>>>> origin/SendDesignsToTailor
 
 urlpatterns = [
     # url(r'^api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('user/', include('users.urls')),
+=======
+    path('',include('Request.urls'))
+>>>>>>> origin/SendDesignsToTailor
 ]
 
 if settings.DEBUG:
